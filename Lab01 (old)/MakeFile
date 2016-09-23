@@ -1,0 +1,17 @@
+Lab01: Dice.o Colosseum.o Pokemon.o main.o
+	g++ -g Dice.o Colosseum.o Pokemon.o main.o -o Lab01
+
+Dice.o: Dice.cpp Dice.h
+	g++ -g -c Dice.cpp
+	
+Colesseum.o: Colosseum.cpp Colosseum.h
+	g++ -g -c Colosseum.cpp
+	
+Pokemon.o: Pokemon.cpp Pokemon.h
+	g++ -g -c Pokemon.cpp
+	
+main.o: main.cpp Pokemon.cpp Colosseum.cpp
+	g++ -g -c main.cpp
+
+clean: rm *.o Lab01
+	echo clean do-diddly done

@@ -1,0 +1,13 @@
+Maze
+position-> row, col
+    DFS -> Stack
+    BFS -> Queue
+
+
+enum class order
+
+enum class search
+{
+    DFS;
+    BFS;
+};

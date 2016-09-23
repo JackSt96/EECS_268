@@ -1,0 +1,18 @@
+std::vector<T> BST::treeToVector(order Order)
+{
+	std::vector<T> vec;
+	tree2Vec(order, m_root, vec);
+	return true;
+}
+
+void BST::tree2Vec(Order order, Node<T>* subtree, std::vector<T>of vec){
+	if(subtree==nullptr)
+	return;
+	switch(order)
+	{
+	case Order::IN_ORDER:
+	tree2Vec(order, subtree->getLeft(), vec);
+	vec.pushBack(subtree->getvalue());
+	tree2Vec(order, subtree->getRight(), vec);
+
+}
